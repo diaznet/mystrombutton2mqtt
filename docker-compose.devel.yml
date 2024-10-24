@@ -3,10 +3,9 @@ services:
   mystrombutton2mqtt:
     image: mystrombutton2mqtt
     build:
-      context: https://github.com/diaznet/mystrombutton2mqtt.git#fix-docker
+      context: .
       dockerfile: Dockerfile
     ports:
       - 8321:8321
     volumes:
-#      - /path/to/app/config:/config
-       - c:\temp\config:/config
+      - /path/to/app/config:/config
