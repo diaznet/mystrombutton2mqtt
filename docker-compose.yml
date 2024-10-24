@@ -8,5 +8,4 @@ services:
     ports:
       - 8321:8321
     volumes:
-#      - /path/to/app/config:/config
-       - c:\temp\config:/config
+      - /path/to/app/config:/config

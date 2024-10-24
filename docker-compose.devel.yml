@@ -7,5 +7,5 @@ services:
       dockerfile: Dockerfile
     ports:
       - 8321:8321
-    volumes:
-      - /path/to/app/config:/config
+#    volumes:
+#      - /path/to/app/config:/config
