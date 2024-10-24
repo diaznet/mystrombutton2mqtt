@@ -1,11 +1,19 @@
 version: '3'
 services:
-  app:
+  mystrombutton2mqtt:
     image: mystrombutton2mqtt
     build:
-      context: .
+      context: https://github.com/diaznet/mystrombutton2mqtt.git#fix-docker
       dockerfile: Dockerfile
     ports:
       - 8321:8321
     volumes:
-      - "./:/app"
+      - mystrombutton2mqtt:/app
+volumes:
+  mystrombutton2mqtt:
+    name: mystrombutton2mqtt-app
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: /path/to/app/data

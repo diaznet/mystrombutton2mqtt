@@ -7,9 +7,8 @@ WORKDIR $APP
 
 EXPOSE 8321
 
-COPY requirements.txt .
+COPY ./src .
 
 RUN pip install -r requirements.txt
 
-COPY . .
 CMD ["python3", "mystrombutton2mqtt.py", "./resources/settings.json"]
